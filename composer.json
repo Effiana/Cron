@@ -1,5 +1,5 @@
 {
-    "name": "cron/cron",
+    "name": "effiana/cron",
     "type": "library",
     "description": "Cronjobs",
     "license": "MIT",
