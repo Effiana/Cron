@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Report;
+namespace Effiana\Cron\Report;
 
-use Cron\Job\JobInterface;
+use Effiana\Cron\Job\JobInterface;
 
 /**
  * CronReport is the class holding all JobReports.

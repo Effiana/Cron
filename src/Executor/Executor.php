@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Executor;
+namespace Effiana\Cron\Executor;
 
-use Cron\Report\CronReport;
-use Cron\Job\JobInterface;
-use Cron\Report\ReportInterface;
+use Effiana\Cron\Report\CronReport;
+use Effiana\Cron\Job\JobInterface;
+use Effiana\Cron\Report\ReportInterface;
 
 /**
  * Executor triggers jobs and builds the reports.

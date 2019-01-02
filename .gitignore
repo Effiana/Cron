@@ -8,3 +8,4 @@
 .vagrant
 Vagrantfile
 /composer.lock
+.idea

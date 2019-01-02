@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Executor;
+namespace Effiana\Cron\Executor;
 
-use Cron\Job\ShellJob;
+use Effiana\Cron\Job\ShellJob;
 
 /**
  * @author Dries De Peuter <dries@nousefreak.be>
@@ -39,6 +39,6 @@ class ExecutorTest extends \PHPUnit\Framework\TestCase
         $job->setCommand('ls -la > test.log');
         $job->setCommand('du -h -d 1 /Users/driesdepeuter/Programming');
 
-        $this->assertInstanceOf('\Cron\Report\ReportInterface', $this->executor->execute([$job]));
+        $this->assertInstanceOf('\Effiana\Cron\Report\ReportInterface', $this->executor->execute([$job]));
     }
 }

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Job;
+namespace Effiana\Cron\Job;
 
-use Cron\Report\JobReport;
+use Effiana\Cron\Report\JobReport;
 
 /**
  * @author Dries De Peuter <dries@nousefreak.be>
@@ -35,7 +35,7 @@ class PhpJobTest extends \PHPUnit\Framework\TestCase
 
     public function testRunning()
     {
-        $scheduleMock = $this->getMockBuilder('\\Cron\\Schedule\\CrontabSchedule')
+        $scheduleMock = $this->getMockBuilder('\\Effiana\Cron\\Schedule\\CrontabSchedule')
             ->getMock();
         $scheduleMock
             ->expects($this->exactly(2))

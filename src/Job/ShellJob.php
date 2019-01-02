@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Job;
+namespace Effiana\Cron\Job;
 
 use Symfony\Component\Process\Process;
 
@@ -23,7 +23,7 @@ class ShellJob extends AbstractProcessJob
     /**
      * Set the command to execute as if you would run it in the shell.
      *
-     * @param string $command
+     * @param array|string $command
      */
     public function setCommand($command)
     {

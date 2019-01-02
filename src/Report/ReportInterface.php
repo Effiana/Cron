@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Report;
+namespace Effiana\Cron\Report;
 
 /**
  * ReportInterface is the interface implemented by all reports.

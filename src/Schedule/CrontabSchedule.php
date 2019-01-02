@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Schedule;
+namespace Effiana\Cron\Schedule;
 
-use Cron\Validator\CrontabValidator;
+use Effiana\Cron\Validator\CrontabValidator;
 
 /**
  * CrontabSchedule holds the job schedule.

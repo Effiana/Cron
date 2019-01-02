@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Exception;
+namespace Effiana\Cron\Exception;
 
 /**
  * InvalidPatternException is thrown when a pattern can not be validated.

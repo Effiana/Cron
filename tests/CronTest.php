@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron;
+namespace Effiana\Cron;
 
-use Cron\Executor\Executor;
-use Cron\Resolver\ArrayResolver;
-use Cron\Job\ShellJob;
+use Effiana\Cron\Executor\Executor;
+use Effiana\Cron\Resolver\ArrayResolver;
+use Effiana\Cron\Job\ShellJob;
 
 /**
  * @author Dries De Peuter <dries@nousefreak.be>
@@ -56,7 +56,7 @@ class CronTest extends \PHPUnit\Framework\TestCase
         $this->cron->setResolver(new ArrayResolver());
         $this->cron->setExecutor(new Executor());
 
-        $this->assertInstanceOf('\Cron\Report\ReportInterface', $this->cron->run());
+        $this->assertInstanceOf('\Effiana\Cron\Report\ReportInterface', $this->cron->run());
     }
 
     public function testRunArray()
@@ -66,25 +66,25 @@ class CronTest extends \PHPUnit\Framework\TestCase
         $this->cron->setResolver(new ArrayResolver([$task]));
         $this->cron->setExecutor(new Executor());
 
-        $this->assertInstanceOf('\Cron\Report\ReportInterface', $this->cron->run());
+        $this->assertInstanceOf('\Effiana\Cron\Report\ReportInterface', $this->cron->run());
     }
 
     public function testExample()
     {
-        $job = new \Cron\Job\ShellJob();
+        $job = new \Effiana\Cron\Job\ShellJob();
         $job->setCommand('echo "total"');
-        $job->setSchedule(new \Cron\Schedule\CrontabSchedule('* * * * *'));
+        $job->setSchedule(new \Effiana\Cron\Schedule\CrontabSchedule('* * * * *'));
 
-        $resolver = new \Cron\Resolver\ArrayResolver();
+        $resolver = new \Effiana\Cron\Resolver\ArrayResolver();
         $resolver->addJob($job);
 
-        $cron = new \Cron\Cron();
-        $cron->setExecutor(new \Cron\Executor\Executor());
+        $cron = new \Effiana\Cron\Cron();
+        $cron->setExecutor(new \Effiana\Cron\Executor\Executor());
         $cron->setResolver($resolver);
 
         $report = $cron->run();
 
-        $this->assertInstanceOf('\Cron\Report\ReportInterface', $report);
+        $this->assertInstanceOf('\Effiana\Cron\Report\ReportInterface', $report);
 
         while ($cron->isRunning()) {
         }
@@ -95,27 +95,27 @@ class CronTest extends \PHPUnit\Framework\TestCase
 
     public function testNewExample()
     {
-        $job1 = new \Cron\Job\ShellJob();
+        $job1 = new \Effiana\Cron\Job\ShellJob();
         $job1->setCommand('ls -la');
-        $job1->setSchedule(new \Cron\Schedule\CrontabSchedule('*/5 * * * *'));
+        $job1->setSchedule(new \Effiana\Cron\Schedule\CrontabSchedule('*/5 * * * *'));
 
-        $job2 = new \Cron\Job\ShellJob();
+        $job2 = new \Effiana\Cron\Job\ShellJob();
         $job2->setCommand('ls -la');
-        $job2->setSchedule(new \Cron\Schedule\CrontabSchedule('0 0 * * 7'));
+        $job2->setSchedule(new \Effiana\Cron\Schedule\CrontabSchedule('0 0 * * 7'));
 
-        $resolver = new \Cron\Resolver\ArrayResolver();
+        $resolver = new \Effiana\Cron\Resolver\ArrayResolver();
         $resolver->addJob($job1);
         $resolver->addJob($job2);
 
-        $cron = new \Cron\Cron();
-        $cron->setExecutor(new \Cron\Executor\Executor());
+        $cron = new \Effiana\Cron\Cron();
+        $cron->setExecutor(new \Effiana\Cron\Executor\Executor());
         $cron->setResolver($resolver);
 
-        $this->assertInstanceOf('\Cron\Report\ReportInterface', $cron->run());
+        $this->assertInstanceOf('\Effiana\Cron\Report\ReportInterface', $cron->run());
     }
 
     public function testDefaultExecutor()
     {
-        $this->assertInstanceOf('\Cron\Executor\Executor', $this->cron->getExecutor());
+        $this->assertInstanceOf('\Effiana\Cron\Executor\Executor', $this->cron->getExecutor());
     }
 }

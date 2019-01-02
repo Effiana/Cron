@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Executor;
+namespace Effiana\Cron\Executor;
 
-use Cron\Job\JobInterface;
-use Cron\Report\ReportInterface;
+use Effiana\Cron\Job\JobInterface;
+use Effiana\Cron\Report\ReportInterface;
 
 /**
  * ExecutorInterface is the interface implemented by all executor classes.

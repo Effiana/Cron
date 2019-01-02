@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Schedule;
+namespace Effiana\Cron\Schedule;
 
 /**
  * @author Dries De Peuter <dries@nousefreak.be>
@@ -69,7 +69,7 @@ class CrontabScheduleTest extends \PHPUnit\Framework\TestCase
      */
     public function testInvalidPatterns($pattern)
     {
-        $this->expectException('\Cron\Exception\InvalidPatternException');
+        $this->expectException('\Effiana\Cron\Exception\InvalidPatternException');
         $this->schedule->setPattern($pattern);
     }
 
@@ -183,7 +183,7 @@ class CrontabScheduleTest extends \PHPUnit\Framework\TestCase
      */
     public function testParseRule($expected, $rule, $minMax)
     {
-        $method = new \ReflectionMethod('\Cron\Schedule\CrontabSchedule', 'parseRule');
+        $method = new \ReflectionMethod('\Effiana\Cron\Schedule\CrontabSchedule', 'parseRule');
         $method->setAccessible(true);
 
         $this->assertEquals($expected, $method->invoke(new CrontabSchedule(), $rule, $minMax[0], $minMax[1]));

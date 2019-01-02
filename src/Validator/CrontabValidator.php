@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Validator;
+namespace Effiana\Cron\Validator;
 
-use Cron\Exception\InvalidPatternException;
+use Effiana\Cron\Exception\InvalidPatternException;
 
 /**
  * CrontabValidator validates a schedule pattern.

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Schedule;
+namespace Effiana\Cron\Schedule;
 
 /**
  * ScheduleInterface is the interface implemented by all schedules.

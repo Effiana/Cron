@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Job;
+namespace Effiana\Cron\Job;
 
 use Symfony\Component\Process\PhpProcess;
 

@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Executor;
+namespace Effiana\Cron\Executor;
 
-use Cron\Job\JobInterface;
-use Cron\Report\ReportInterface;
-use Cron\Report\JobReport;
+use Effiana\Cron\Job\JobInterface;
+use Effiana\Cron\Report\ReportInterface;
+use Effiana\Cron\Report\JobReport;
 
 /**
  * ExecutorSet is the collection of a job and its reports.

@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron;
+namespace Effiana\Cron;
 
-use Cron\Executor\Executor;
-use Cron\Executor\ExecutorInterface;
-use Cron\Resolver\ResolverInterface;
+use Effiana\Cron\Executor\Executor;
+use Effiana\Cron\Executor\ExecutorInterface;
+use Effiana\Cron\Resolver\ResolverInterface;
 
 /**
  * Cron is the main class of the project.

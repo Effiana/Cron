@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Report;
+namespace Effiana\Cron\Report;
 
-use Cron\Job\JobInterface;
+use Effiana\Cron\Job\JobInterface;
 
 /**
  * JobReport contains the output of a job.

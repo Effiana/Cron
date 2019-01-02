@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Builder;
+namespace Effiana\Cron\Builder;
 
 class SchemaBuilderTest extends \PHPUnit\Framework\TestCase
 {

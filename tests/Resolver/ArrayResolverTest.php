@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Resolver;
+namespace Effiana\Cron\Resolver;
 
-use Cron\Job\ShellJob;
-use Cron\Schedule\CrontabSchedule;
+use Effiana\Cron\Job\ShellJob;
+use Effiana\Cron\Schedule\CrontabSchedule;
 
 /**
  * @author Dries De Peuter <dries@nousefreak.be>

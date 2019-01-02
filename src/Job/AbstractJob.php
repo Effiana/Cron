@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Job;
+namespace Effiana\Cron\Job;
 
-use Cron\Report\JobReport;
-use Cron\Schedule\ScheduleInterface;
+use Effiana\Cron\Report\JobReport;
+use Effiana\Cron\Schedule\ScheduleInterface;
 
 /**
  * AbstractJob base job class.

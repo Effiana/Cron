@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Job;
+namespace Effiana\Cron\Job;
 
-use Cron\Report\JobReport;
+use Effiana\Cron\Report\JobReport;
 use Symfony\Component\Process\Process;
 
 /**

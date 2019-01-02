@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Resolver;
+namespace Effiana\Cron\Resolver;
 
-use Cron\Job\JobInterface;
+use Effiana\Cron\Job\JobInterface;
 
 /**
  * ResolverInterface is the interface implemented by all resolvers.

@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Cron\\": "src/"
+            "Effiana\\Cron\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cron\\": "tests/"
+            "Effiana\\Cron\\": "tests/"
         }
     },
     "extra": {

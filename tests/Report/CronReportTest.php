@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Cron\Report;
+namespace Effiana\Cron\Report;
 
-use Cron\Job\JobInterface;
-use Cron\Job\PhpJob;
-use Cron\Job\ShellJob;
+use Effiana\Cron\Job\JobInterface;
+use Effiana\Cron\Job\PhpJob;
+use Effiana\Cron\Job\ShellJob;
 
 /**
  * @author Dries De Peuter <dries@nousefreak.be>
@@ -145,15 +145,15 @@ class CronReportTest extends \PHPUnit\Framework\TestCase
     /**
      * @param JobInterface $job
      *
-     * @return \Cron\Cron
+     * @return \Effiana\Cron\Cron
      */
     protected function createCron(JobInterface $job)
     {
-        $resolver = new \Cron\Resolver\ArrayResolver();
+        $resolver = new \Effiana\Cron\Resolver\ArrayResolver();
         $resolver->addJob($job);
 
-        $cron = new \Cron\Cron();
-        $cron->setExecutor(new \Cron\Executor\Executor());
+        $cron = new \Effiana\Cron\Cron();
+        $cron->setExecutor(new \Effiana\Cron\Executor\Executor());
         $cron->setResolver($resolver);
 
         return $cron;
@@ -166,9 +166,9 @@ class CronReportTest extends \PHPUnit\Framework\TestCase
      */
     protected function createJob($command)
     {
-        $job = new \Cron\Job\ShellJob();
+        $job = new \Effiana\Cron\Job\ShellJob();
         $job->setCommand($command);
-        $job->setSchedule(new \Cron\Schedule\CrontabSchedule('* * * * *'));
+        $job->setSchedule(new \Effiana\Cron\Schedule\CrontabSchedule('* * * * *'));
 
         return $job;
     }
